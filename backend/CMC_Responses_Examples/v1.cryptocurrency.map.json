@@ -1,0 +1,48 @@
+{
+    "status": {
+        "timestamp": "2025-09-17T05:23:16.350Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 341,
+        "credit_count": 1,
+        "notice": null
+    },
+    "data": [
+        {
+            "id": 1,
+            "rank": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "slug": "bitcoin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2010-07-13T00:05:00.000Z",
+            "last_historical_data": "2025-09-17T05:05:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 2,
+            "rank": 20,
+            "name": "Litecoin",
+            "symbol": "LTC",
+            "slug": "litecoin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2013-04-28T18:45:00.000Z",
+            "last_historical_data": "2025-09-17T05:05:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 3,
+            "rank": 868,
+            "name": "Namecoin",
+            "symbol": "NMC",
+            "slug": "namecoin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2013-04-28T18:45:00.000Z",
+            "last_historical_data": "2025-09-17T05:05:00.000Z",
+            "platform": null
+        }
+    ]
+}

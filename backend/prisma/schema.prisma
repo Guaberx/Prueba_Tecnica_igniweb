@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model UpdateLog {
+  id        Int      @id @default(autoincrement())
+  source    String   @unique // e.g. "map", "info", "quotes:BTC"
+  updatedAt DateTime @default(now())
+}
+
+model CoinInfo {
+  coin_id     Int     @id
+  symbol      String  @unique
+  name        String
+  slug        String
+  rank        Int?
+  logo        String?
+  description String?
+  website     String?
+  category    String?
+
+  CoinQuotes CoinQuotes[]
+  UserCoins  UserCoins[]
+}
+
+model CoinQuotes {
+  id                       Int       @id @default(autoincrement())
+  coin_id                  Int
+  price                    Decimal
+  volume_24h               Decimal
+  volume_change_24h        Decimal?
+  percent_change_1h        Decimal
+  percent_change_24h       Decimal
+  percent_change_7d        Decimal
+  percent_change_30d       Decimal?
+  market_cap               Decimal
+  market_cap_dominance     Decimal?
+  fully_diluted_market_cap Decimal?
+  last_updated             DateTime?
+  timestamp                DateTime
+
+  coin CoinInfo @relation(fields: [coin_id], references: [coin_id])
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+
+  UserCoins UserCoins[]
+}
+
+model UserCoins {
+  id      Int @id @default(autoincrement())
+  user_id Int
+  coin_id Int
+
+  user User     @relation(fields: [user_id], references: [id])
+  coin CoinInfo @relation(fields: [coin_id], references: [coin_id])
+
+  @@unique([user_id, coin_id])
+}

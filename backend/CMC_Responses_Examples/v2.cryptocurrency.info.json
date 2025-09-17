@@ -1,0 +1,103 @@
+{
+    "data": {
+        "1": {
+            "urls": {
+                "website": [
+                    "https://bitcoin.org/"
+                ],
+                "technical_doc": [
+                    "https://bitcoin.org/bitcoin.pdf"
+                ],
+                "twitter": [],
+                "reddit": [
+                    "https://reddit.com/r/bitcoin"
+                ],
+                "message_board": [
+                    "https://bitcointalk.org"
+                ],
+                "announcement": [],
+                "chat": [],
+                "explorer": [
+                    "https://blockchain.coinmarketcap.com/chain/bitcoin",
+                    "https://blockchain.info/",
+                    "https://live.blockcypher.com/btc/"
+                ],
+                "source_code": [
+                    "https://github.com/bitcoin/"
+                ]
+            },
+            "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+            "id": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "slug": "bitcoin",
+            "description": "Descripcion detallada del Bitcoin",
+            "date_added": "2013-04-28T00:00:00.000Z",
+            "date_launched": "2013-04-28T00:00:00.000Z",
+            "tags": [
+                "mineable"
+            ],
+            "platform": null,
+            "category": "coin"
+        },
+        "1027": {
+            "urls": {
+                "website": [
+                    "https://www.ethereum.org/"
+                ],
+                "technical_doc": [
+                    "https://github.com/ethereum/wiki/wiki/White-Paper"
+                ],
+                "twitter": [
+                    "https://twitter.com/ethereum"
+                ],
+                "reddit": [
+                    "https://reddit.com/r/ethereum"
+                ],
+                "message_board": [
+                    "https://forum.ethereum.org/"
+                ],
+                "announcement": [
+                    "https://bitcointalk.org/index.php?topic=428589.0"
+                ],
+                "chat": [
+                    "https://gitter.im/orgs/ethereum/rooms"
+                ],
+                "explorer": [
+                    "https://blockchain.coinmarketcap.com/chain/ethereum",
+                    "https://etherscan.io/",
+                    "https://ethplorer.io/"
+                ],
+                "source_code": [
+                    "https://github.com/ethereum"
+                ]
+            },
+            "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
+            "id": 1027,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "slug": "ethereum",
+            "description": "Ethereum (ETH) is a smart contract platform that enables developers to build decentralized applications (dapps) conceptualized by Vitalik Buterin in 2013. ETH is the native currency for the Ethereum platform and also works as the transaction fees to miners on the Ethereum network.",
+            "notice": null,
+            "date_added": "2015-08-07T00:00:00.000Z",
+            "date_launched": "2015-08-07T00:00:00.000Z",
+            "tags": [
+                "mineable"
+            ],
+            "platform": null,
+            "category": "coin",
+            "self_reported_circulating_supply": null,
+            "self_reported_market_cap": null,
+            "self_reported_tags": null,
+            "infinite_supply": false
+        }
+    },
+    "status": {
+        "timestamp": "2025-09-17T04:01:27.374Z",
+        "error_code": 0,
+        "error_message": "",
+        "elapsed": 10,
+        "credit_count": 1,
+        "notice": ""
+    }
+}

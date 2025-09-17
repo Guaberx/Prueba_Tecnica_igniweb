@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2022", /* Modern JS features */
+    "module": "es2022", /* Use ES modules */
+    "moduleResolution": "node", /* Best for Node + ESM */
+    "lib": [
+      "es2022"
+    ],
+    /* Output */
+    "outDir": "dist", /* Build output folder */
+    "rootDir": "src", /* Source folder */
+    "esModuleInterop": true, /* Allow default imports from CJS */
+    "allowSyntheticDefaultImports": true, /* For smoother imports */
+    "resolveJsonModule": true, /* Import .json files */
+    "isolatedModules": true, /* Helps with ESM tooling */
+    /* Type Checking */
+    "strict": true, /* Enable strict checks */
+    "skipLibCheck": true, /* Skip type checks on node_modules */
+    "forceConsistentCasingInFileNames": true, /* Enforce import path casing */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
