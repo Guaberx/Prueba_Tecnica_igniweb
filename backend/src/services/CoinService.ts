@@ -279,7 +279,7 @@ async function lazyLoadCoins(coinIds: number[]): Promise<void> {
         return;
     }
 
-    const coinIdsString = coinIds.join(',');
+    const coinIdsString = coinIds;
     const data = await cmcClient.fetchInfo(coinIdsString);
     const infoRecords = Object.values(data.data || {});
 
