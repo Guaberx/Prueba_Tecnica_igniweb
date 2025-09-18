@@ -27,7 +27,7 @@ model CoinInfo {
   slug        String
   rank        Int?
   logo        String?
-  description String?
+  description String? @db.Text
   website     String?
   category    String?
 
