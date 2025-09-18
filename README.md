@@ -21,6 +21,19 @@ luego de esto puedes correr el servidor con
 `npm run dev`
 
 
+Es necesario crear un usuario antes de utilizar el front. Para esto, crea un usuario en la tabla User o utiliza el endpoint
+
+POST
+/users/signup
+
+Body
+```JSON
+{
+    "username": "default_user",
+    "password": "password",
+    "email": "email@mail.com"
+}
+```
 # Frontend
 Asegurate de configurar un archivo .env
 
