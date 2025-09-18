@@ -22,7 +22,7 @@ model UpdateLog {
 
 model CoinInfo {
   coin_id     Int     @id
-  symbol      String  @unique
+  symbol      String
   name        String
   slug        String
   rank        Int?
