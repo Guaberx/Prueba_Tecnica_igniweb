@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "696ed72b-c895-4bdf-a535-947a98edd00d",
+		"name": "Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Backend",
+			"item": [
+				{
+					"name": "Coins",
+					"item": [
+						{
+							"name": "GET",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/coins?query=iinrkdjx29",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"coins"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "iinrkdjx29",
+											"description": "symbol or name or slug"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GET",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/coins?query=iinrkdjx29",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"coins"
+											],
+											"query": [
+												{
+													"key": "query",
+													"value": "iinrkdjx29",
+													"description": "symbol or name or slug"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "239"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ef-jw6VJtBvOvbLwQm7GhgHCkEz6iU\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 16:06:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"coin_id\": 3912,\n        \"symbol\": \"rqva44jthza\",\n        \"name\": \"dat14q2p7z9\",\n        \"slug\": \"iinrkdjx29\",\n        \"rank\": 61,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"leln8c4xvaa\",\n        \"website\": \"dhduvc8btde\",\n        \"category\": \"4gk0sg033g9\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GET /rank",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/coins/rank?start=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"coins",
+										"rank"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GET /rank",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/coins/rank?start=0&limit=100",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"coins",
+												"rank"
+											],
+											"query": [
+												{
+													"key": "start",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2398"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"95e-v8Br5j9A6VKjzMO2djh0KLuuF1M\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 16:06:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"coin_id\": 3912,\n        \"symbol\": \"rqva44jthza\",\n        \"name\": \"dat14q2p7z9\",\n        \"slug\": \"iinrkdjx29\",\n        \"rank\": 61,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"leln8c4xvaa\",\n        \"website\": \"dhduvc8btde\",\n        \"category\": \"4gk0sg033g9\"\n    },\n    {\n        \"coin_id\": 2594,\n        \"symbol\": \"hpf8yl9trx4\",\n        \"name\": \"gq5rf8py0kv\",\n        \"slug\": \"ur962hz7cc\",\n        \"rank\": 688,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"m96j8kjv60j\",\n        \"website\": \"uo6eu6hmmjg\",\n        \"category\": \"39adn1a915m\"\n    },\n    {\n        \"coin_id\": 5887,\n        \"symbol\": \"qwk8nlzo85\",\n        \"name\": \"ys98x5bf1d\",\n        \"slug\": \"g1t2ud3o46l\",\n        \"rank\": 1859,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"5qayb2ajb6\",\n        \"website\": \"z80scvj41pr\",\n        \"category\": \"1hl9x4g3zux\"\n    },\n    {\n        \"coin_id\": 3009,\n        \"symbol\": \"bd6n9yl24b\",\n        \"name\": \"u144nqyfl1\",\n        \"slug\": \"il09b33cws\",\n        \"rank\": 2889,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"y092jqx5trk\",\n        \"website\": \"n7e6zseu5v\",\n        \"category\": \"xfx7m1c7x0n\"\n    },\n    {\n        \"coin_id\": 2602,\n        \"symbol\": \"i5piul357d\",\n        \"name\": \"f61gtggjeg\",\n        \"slug\": \"hon2wxavl14\",\n        \"rank\": 4340,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"6vxxaj3vuew\",\n        \"website\": \"t3a897c03pq\",\n        \"category\": \"sywuqp1wo99\"\n    },\n    {\n        \"coin_id\": 8091,\n        \"symbol\": \"5jlxi6mtzel\",\n        \"name\": \"0mnul67kd84q\",\n        \"slug\": \"we97i4bsim\",\n        \"rank\": 5170,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"kxjdmcnifke\",\n        \"website\": \"01mlwak25use\",\n        \"category\": \"46ievpu5kxc\"\n    },\n    {\n        \"coin_id\": 9562,\n        \"symbol\": \"26q480to6faj\",\n        \"name\": \"4d1q0meznxp\",\n        \"slug\": \"uyff5gb2p8k\",\n        \"rank\": 6733,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"nuknw23vjac\",\n        \"website\": \"ysgkvczbvgc\",\n        \"category\": \"46vrs92af1v\"\n    },\n    {\n        \"coin_id\": 8152,\n        \"symbol\": \"dkym36g88al\",\n        \"name\": \"efqlewe9g8l\",\n        \"slug\": \"eyfb46j4169\",\n        \"rank\": 7898,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"gqy7lzx8y1m\",\n        \"website\": \"ixw2c33bxh9\",\n        \"category\": \"1d65byxrg5xj\"\n    },\n    {\n        \"coin_id\": 8744,\n        \"symbol\": \"oyo9tnyqhuk\",\n        \"name\": \"dvca6ivkmgh\",\n        \"slug\": \"ksiv6tsko0n\",\n        \"rank\": 8556,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"ucehc1q4wdq\",\n        \"website\": \"sz6prvvsg7\",\n        \"category\": \"xnocrnls32c\"\n    },\n    {\n        \"coin_id\": 8529,\n        \"symbol\": \"61gi0vlvc2s\",\n        \"name\": \"41xxrwegyjs\",\n        \"slug\": \"xiscyqj2j9g\",\n        \"rank\": 9915,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"bqs9f7usijo\",\n        \"website\": \"475x43dznta\",\n        \"category\": \"oxxte0o86e\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GET /historical",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/coins/historical?identifiers=3912,2594",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"coins",
+										"historical"
+									],
+									"query": [
+										{
+											"key": "identifiers",
+											"value": "3912,2594"
+										},
+										{
+											"key": "interval",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "start",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "end",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GET /historical",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/coins/historical?identifiers=3912,2594",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"coins",
+												"historical"
+											],
+											"query": [
+												{
+													"key": "identifiers",
+													"value": "3912,2594"
+												},
+												{
+													"key": "interval",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "end",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2325"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"915-QuyI6wHRIPXOP/Zz+4UgPqnr9V8\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 16:06:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"coin_id\": 2594,\n        \"coin\": {\n            \"coin_id\": 2594,\n            \"symbol\": \"hpf8yl9trx4\",\n            \"name\": \"gq5rf8py0kv\",\n            \"slug\": \"ur962hz7cc\",\n            \"rank\": 688,\n            \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n            \"description\": \"m96j8kjv60j\",\n            \"website\": \"uo6eu6hmmjg\",\n            \"category\": \"39adn1a915m\"\n        },\n        \"quotes\": [\n            {\n                \"timestamp\": \"2025-09-17T14:23:12.674Z\",\n                \"price\": 0.3750331189535043,\n                \"volume_24h\": 0.8417213501787013,\n                \"volume_change_24h\": 0.1842302793243957,\n                \"percent_change_1h\": 0.8600713184558069,\n                \"percent_change_24h\": 0.2441714767017609,\n                \"percent_change_7d\": 0.9847750806765041,\n                \"percent_change_30d\": 0.4464441169156266,\n                \"market_cap\": 0.6395999407041315,\n                \"market_cap_dominance\": 9702,\n                \"fully_diluted_market_cap\": 0.2982148041695889,\n                \"last_updated\": \"2025-09-17T14:23:11.900Z\"\n            },\n            {\n                \"timestamp\": \"2025-09-17T16:06:28.719Z\",\n                \"price\": 0.5679591036273519,\n                \"volume_24h\": 0.3184266289130318,\n                \"volume_change_24h\": 0.7196405496716827,\n                \"percent_change_1h\": 0.5306013144640682,\n                \"percent_change_24h\": 0.05326476055413987,\n                \"percent_change_7d\": 0.9845887974260663,\n                \"percent_change_30d\": 0.69071796605997,\n                \"market_cap\": 0.368445524274094,\n                \"market_cap_dominance\": 2545,\n                \"fully_diluted_market_cap\": 0.7132585839869812,\n                \"last_updated\": \"2025-09-17T16:06:28.022Z\"\n            }\n        ]\n    },\n    {\n        \"coin_id\": 3912,\n        \"coin\": {\n            \"coin_id\": 3912,\n            \"symbol\": \"rqva44jthza\",\n            \"name\": \"dat14q2p7z9\",\n            \"slug\": \"iinrkdjx29\",\n            \"rank\": 61,\n            \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n            \"description\": \"leln8c4xvaa\",\n            \"website\": \"dhduvc8btde\",\n            \"category\": \"4gk0sg033g9\"\n        },\n        \"quotes\": [\n            {\n                \"timestamp\": \"2025-09-17T14:23:12.788Z\",\n                \"price\": 0.6222736741961672,\n                \"volume_24h\": 0.3060245488979365,\n                \"volume_change_24h\": 0.205797540819741,\n                \"percent_change_1h\": 0.2382835484907115,\n                \"percent_change_24h\": 0.4981921269327603,\n                \"percent_change_7d\": 0.8579692361715561,\n                \"percent_change_30d\": 0.6647425955281667,\n                \"market_cap\": 0.1617899354976475,\n                \"market_cap_dominance\": 7973,\n                \"fully_diluted_market_cap\": 0.9046329273300744,\n                \"last_updated\": \"2025-09-17T14:23:12.027Z\"\n            },\n            {\n                \"timestamp\": \"2025-09-17T16:06:28.839Z\",\n                \"price\": 0.8023237110559178,\n                \"volume_24h\": 0.1332625153420974,\n                \"volume_change_24h\": 0.9479230781199257,\n                \"percent_change_1h\": 0.9479496637847269,\n                \"percent_change_24h\": 0.6775410983038277,\n                \"percent_change_7d\": 0.6725951377022683,\n                \"percent_change_30d\": 0.08889413979636673,\n                \"market_cap\": 0.4671326640394193,\n                \"market_cap_dominance\": 951,\n                \"fully_diluted_market_cap\": 0.1230177212180223,\n                \"last_updated\": \"2025-09-17T16:06:28.148Z\"\n            }\n        ]\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GET /latest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/coins/latest?ids=3912,2594",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"coins",
+										"latest"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "3912,2594"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GET /latest",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/coins/latest?ids=3912,2594",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"coins",
+												"latest"
+											],
+											"query": [
+												{
+													"key": "ids",
+													"value": "3912,2594"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2062"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"80e-TWIw1+vYGfazHqcbwyaSrtQ74EE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 16:06:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": {\n        \"timestamp\": \"2025-09-17T16:06:35.542Z\",\n        \"error_code\": 0,\n        \"error_message\": null,\n        \"elapsed\": 1,\n        \"credit_count\": 1,\n        \"notice\": null\n    },\n    \"data\": {\n        \"2594\": {\n            \"id\": 2594,\n            \"name\": \"n6qnvb3qjpa\",\n            \"symbol\": \"7tqnkudr9o4\",\n            \"slug\": \"0dc3lvnvlmjc\",\n            \"is_active\": 1683,\n            \"is_fiat\": null,\n            \"circulating_supply\": 5368,\n            \"total_supply\": 8268,\n            \"max_supply\": 1786,\n            \"date_added\": \"2025-09-17T16:06:35.542Z\",\n            \"num_market_pairs\": 752,\n            \"cmc_rank\": 8568,\n            \"last_updated\": \"2025-09-17T16:06:35.542Z\",\n            \"tags\": [\n                \"x6to4xdn5lp\",\n                \"fi8lv362dyl\",\n                \"xjp9f09mshj\",\n                \"xalviu4r5o\",\n                \"tn3arebo8si\",\n                \"e6l8m4t6gug\",\n                \"gqssa2zagk4\",\n                \"xjnegcoccla\",\n                \"82j7luqv42s\",\n                \"iay69sdbdfm\"\n            ],\n            \"platform\": null,\n            \"self_reported_circulating_supply\": null,\n            \"self_reported_market_cap\": null,\n            \"quote\": {\n                \"USD\": {\n                    \"price\": 0.5548509607340861,\n                    \"volume_24h\": 0.5199493808767803,\n                    \"volume_change_24h\": 0.7938784063631581,\n                    \"percent_change_1h\": 0.026621971716729753,\n                    \"percent_change_24h\": 0.6035690714648558,\n                    \"percent_change_7d\": 0.7435287395575929,\n                    \"percent_change_30d\": 0.4000196767515558,\n                    \"market_cap\": 0.5090085689413999,\n                    \"market_cap_dominance\": 3501,\n                    \"fully_diluted_market_cap\": 0.3465932027487155,\n                    \"last_updated\": \"2025-09-17T16:06:35.542Z\"\n                }\n            }\n        },\n        \"3912\": {\n            \"id\": 3912,\n            \"name\": \"2bqdugdzkwz\",\n            \"symbol\": \"h0slm4212bp\",\n            \"slug\": \"uii1ndbhcds\",\n            \"is_active\": 1190,\n            \"is_fiat\": null,\n            \"circulating_supply\": 6658,\n            \"total_supply\": 7300,\n            \"max_supply\": 6514,\n            \"date_added\": \"2025-09-17T16:06:35.542Z\",\n            \"num_market_pairs\": 4046,\n            \"cmc_rank\": 6344,\n            \"last_updated\": \"2025-09-17T16:06:35.542Z\",\n            \"tags\": [\n                \"e4umbsdh80w\",\n                \"f3sf7hs67n7\",\n                \"p4ckv00nh7m\",\n                \"tdc1xyowbs\",\n                \"7vvgm7xcpjd\",\n                \"aelw8uubi1\",\n                \"ph60n6mszva\",\n                \"yb224ohaw4b\",\n                \"w1vweap7ih\",\n                \"ehqbissgwzv\"\n            ],\n            \"platform\": null,\n            \"self_reported_circulating_supply\": null,\n            \"self_reported_market_cap\": null,\n            \"quote\": {\n                \"USD\": {\n                    \"price\": 0.3152951990854005,\n                    \"volume_24h\": 0.7069329634548718,\n                    \"volume_change_24h\": 0.24927554820595121,\n                    \"percent_change_1h\": 0.3324566922141128,\n                    \"percent_change_24h\": 0.4717527712047864,\n                    \"percent_change_7d\": 0.8958823422576001,\n                    \"percent_change_30d\": 0.11789149218052053,\n                    \"market_cap\": 0.32029732062406757,\n                    \"market_cap_dominance\": 2570,\n                    \"fully_diluted_market_cap\": 0.5937079823443148,\n                    \"last_updated\": \"2025-09-17T16:06:35.542Z\"\n                }\n            }\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"default_user\",\r\n    \"password\": \"password\",\r\n    \"email\": \"email@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Watchlist",
+					"item": [
+						{
+							"name": "get watchlist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/watchlist/{{dev_user_id}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"watchlist",
+										"{{dev_user_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get watchlist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/watchlist/{{dev_user_id}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"watchlist",
+												"{{dev_user_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "716"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2cc-kN2yrzLqq3cwEBUEwUpr+krr2+0\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 16:06:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"coin_id\": 2594,\n        \"symbol\": \"hpf8yl9trx4\",\n        \"name\": \"gq5rf8py0kv\",\n        \"slug\": \"ur962hz7cc\",\n        \"rank\": 688,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"m96j8kjv60j\",\n        \"website\": \"uo6eu6hmmjg\",\n        \"category\": \"39adn1a915m\"\n    },\n    {\n        \"coin_id\": 3912,\n        \"symbol\": \"rqva44jthza\",\n        \"name\": \"dat14q2p7z9\",\n        \"slug\": \"iinrkdjx29\",\n        \"rank\": 61,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"leln8c4xvaa\",\n        \"website\": \"dhduvc8btde\",\n        \"category\": \"4gk0sg033g9\"\n    },\n    {\n        \"coin_id\": 5887,\n        \"symbol\": \"qwk8nlzo85\",\n        \"name\": \"ys98x5bf1d\",\n        \"slug\": \"g1t2ud3o46l\",\n        \"rank\": 1859,\n        \"logo\": \"https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png\",\n        \"description\": \"5qayb2ajb6\",\n        \"website\": \"z80scvj41pr\",\n        \"category\": \"1hl9x4g3zux\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add to watchlist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"coinIds\": [\r\n        3912,\r\n        2594,\r\n        5887\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/watchlist/{{dev_user_id}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"watchlist",
+										"{{dev_user_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add to watchlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"coinIds\": [\r\n        3912,\r\n        2594,\r\n        5887\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/watchlist/{{dev_user_id}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"watchlist",
+												"{{dev_user_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Sep 2025 14:46:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
