@@ -91,26 +91,26 @@ export async function syncCoinData(): Promise<SyncResult> {
             infoSkipped = true;
         } else {
             console.log("Preparing to fetch info data...");
-            let coinIds: string;
+            let coinIds: number[];
 
             if (mapData) {
-                coinIds = mapData.data.map(coin => coin.id).join(',');
+                coinIds = mapData.data.map(coin => coin.id);
                 console.log(`Using ${mapData.data.length} coin IDs from fresh map data`);
             } else {
                 console.log("Fetching existing coin IDs from database...");
                 const existingCoins = await prisma.coinInfo.findMany({
                     select: { coin_id: true }
                 });
-                coinIds = existingCoins.map(coin => coin.coin_id).join(',');
+                coinIds = existingCoins.map(coin => coin.coin_id);
                 console.log(`Found ${existingCoins.length} existing coins in database`);
             }
 
             if (!coinIds) {
                 console.log("No coin IDs available for /info fetch - skipping");
             } else {
-                console.log(`Fetching detailed info for ${coinIds.split(',').length} coins...`);
+                console.log(`Fetching detailed info for ${coinIds.length} coins...`);
                 try {
-                    const infoData = await fetchInfoDataByIds(coinIds);
+                    const infoData: CMCInfoResponse = await fetchInfoDataByIds(coinIds);
                     console.log(`Fetched detailed info for ${Object.keys(infoData.data).length} coins from /info`);
 
                     console.log("Storing info data in database...");
@@ -144,7 +144,7 @@ async function fetchMapData(): Promise<CMCMapResponse> {
     return cmcClient.fetchMap();
 }
 
-async function fetchInfoDataByIds(coinIds: string): Promise<CMCInfoResponse> {
+async function fetchInfoDataByIds(coinIds: number[]): Promise<CMCInfoResponse> {
     return cmcClient.fetchInfo(coinIds);
 }
 

@@ -44,13 +44,36 @@ export class CMCClient {
     }
 
     async fetchMap(): Promise<CMCMapResponse> {
-        const response = await fetch(`${this.baseUrl}${process.env.MAP}`, { headers: this.getHeaders() });
+        let completeUrl = `${this.baseUrl}${process.env.MAP}`;
+        if (process.env.MAP_LIMIT) {
+            const limit = Number(process.env.MAP_LIMIT);
+            if (limit > 0 && limit <= 5000) {
+                completeUrl = `${this.baseUrl}${process.env.MAP}?limit=${limit}`;
+            }
+
+        }
+
+        const response = await fetch(completeUrl, { headers: this.getHeaders() });
         return this.handleResponse<CMCMapResponse>(response, "/map");
     }
 
-    async fetchInfo(coinIds: string): Promise<CMCInfoResponse> {
-        const response = await fetch(`${this.baseUrl}${process.env.INFO}?id=${coinIds}`, { headers: this.getHeaders() });
-        return this.handleResponse<CMCInfoResponse>(response, "/info");
+    async fetchInfo(coinIds: number[]): Promise<CMCInfoResponse> {
+        const max_batch_size = 1000;
+        const batches: number[][] = []
+        for (let i = 0; i < coinIds.length; i += max_batch_size) {
+            batches.push(coinIds.slice(i, i + max_batch_size))
+        }
+        const p = batches.map(cIds => {
+            return fetch(`${this.baseUrl}${process.env.INFO}?id=${cIds.join(",")}`, { headers: this.getHeaders() });
+        });
+
+        const responses = await Promise.all(p);
+        const data: CMCInfoResponse[] = await Promise.all(responses.map(r => this.handleResponse<CMCInfoResponse>(r, "/info")));
+
+        return data.reduce((prev, current) => ({ ...prev, data: { ...prev.data, ...current.data } }), { data: {}, status: {} } as CMCInfoResponse);
+
+        // const response = await fetch(`${this.baseUrl}${process.env.INFO}?id=${coinIds}`, { headers: this.getHeaders() });
+        // return this.handleResponse<CMCInfoResponse>(response, "/info");
     }
 
     async fetchLatestQuotes(coinIds: string): Promise<CMCQuotesLatest> {
